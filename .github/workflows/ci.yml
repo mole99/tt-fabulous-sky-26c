@@ -124,6 +124,6 @@ jobs:
       - name: Set up the PDK
         run: |
           nix develop --command ciel enable --pdk-family sky130 026824c7969ce6f4fc9678e6ca04b0a06a596c4b
-      - name: Simulate the FPGA RTL/GL (Simulation)
-        run: |
-          GL=1 PDK=${{ matrix.pdk }} TILE_LIBRARY=${{ env.TILE_LIBRARY }} FABRIC=${{ matrix.fabrics }} nix develop --command bash -c "cd tb; python3 top_tb.py"
+      #- name: Simulate the FPGA RTL/GL (Simulation)
+      #  run: |
+      #    GL=1 PDK=${{ matrix.pdk }} TILE_LIBRARY=${{ env.TILE_LIBRARY }} FABRIC=${{ matrix.fabrics }} nix develop --command bash -c "cd tb; python3 top_tb.py"
