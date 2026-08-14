@@ -14,11 +14,11 @@ project:
   analog_pins: 0        # Valid values: 0 to 6
 
   # Your top module name must start with "tt_um_". Make it unique by including your github username:
-  top_module:  "tt_um_fabulous_sky_26b"
+  top_module:  "tt_um_fabulous_sky_26c"
 
   # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
   source_files:        
-    - "tt_um_fabulous_sky_26b_stubs.sv"
+    - "tt_um_fabulous_sky_26c_stubs.sv"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).

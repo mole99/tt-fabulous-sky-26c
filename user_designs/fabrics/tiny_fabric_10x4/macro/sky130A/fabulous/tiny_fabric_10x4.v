@@ -541,7 +541,7 @@ assign Column_X9_FrameStrobe = FrameStrobe[MaxFramesPerCol*(9+1)-1:MaxFramesPerC
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-NW_term
+(* keep *) NW_term
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X0Y0_Emulate_Bitstream)
@@ -560,7 +560,7 @@ NW_term
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-N_term
+(* keep *) N_term
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X1Y0_Emulate_Bitstream)
@@ -585,7 +585,7 @@ N_term
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-N_term
+(* keep *) N_term
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X2Y0_Emulate_Bitstream)
@@ -610,7 +610,7 @@ N_term
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-N_term
+(* keep *) N_term
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X3Y0_Emulate_Bitstream)
@@ -635,7 +635,7 @@ N_term
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-N_term
+(* keep *) N_term
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X4Y0_Emulate_Bitstream)
@@ -660,7 +660,7 @@ N_term
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-N_term
+(* keep *) N_term
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X5Y0_Emulate_Bitstream)
@@ -685,7 +685,7 @@ N_term
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-N_term
+(* keep *) N_term
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X6Y0_Emulate_Bitstream)
@@ -710,7 +710,7 @@ N_term
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-N_term
+(* keep *) N_term
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X7Y0_Emulate_Bitstream)
@@ -735,7 +735,7 @@ N_term
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-N_term
+(* keep *) N_term
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X8Y0_Emulate_Bitstream)
@@ -760,7 +760,7 @@ N_term
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-NE_term
+(* keep *) NE_term
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X9Y0_Emulate_Bitstream)
@@ -778,7 +778,7 @@ NE_term
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-W_IO4
+(* keep *) W_IO4
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X0Y1_Emulate_Bitstream)
@@ -817,7 +817,7 @@ W_IO4
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-LUT4x8_ha
+(* keep *) LUT4x8_ha
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X1Y1_Emulate_Bitstream)
@@ -862,7 +862,7 @@ LUT4x8_ha
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-LUT4x8_ha
+(* keep *) LUT4x8_ha
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X2Y1_Emulate_Bitstream)
@@ -907,7 +907,7 @@ LUT4x8_ha
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-LUT4x8_ha
+(* keep *) LUT4x8_ha
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X3Y1_Emulate_Bitstream)
@@ -952,7 +952,7 @@ LUT4x8_ha
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-LUT4x8_ha
+(* keep *) LUT4x8_ha
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X4Y1_Emulate_Bitstream)
@@ -997,7 +997,7 @@ LUT4x8_ha
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-LUT4x8_ha
+(* keep *) LUT4x8_ha
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X5Y1_Emulate_Bitstream)
@@ -1042,7 +1042,7 @@ LUT4x8_ha
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-LUT4x8_ha
+(* keep *) LUT4x8_ha
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X6Y1_Emulate_Bitstream)
@@ -1087,7 +1087,7 @@ LUT4x8_ha
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-LUT4x8_ha
+(* keep *) LUT4x8_ha
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X7Y1_Emulate_Bitstream)
@@ -1132,7 +1132,7 @@ LUT4x8_ha
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-LUT4x8_ha
+(* keep *) LUT4x8_ha
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X8Y1_Emulate_Bitstream)
@@ -1177,7 +1177,7 @@ LUT4x8_ha
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-E_IO4
+(* keep *) E_IO4
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X9Y1_Emulate_Bitstream)
@@ -1214,7 +1214,7 @@ E_IO4
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-W_IO4
+(* keep *) W_IO4
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X0Y2_Emulate_Bitstream)
@@ -1253,7 +1253,7 @@ W_IO4
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-LUT4x8_ha
+(* keep *) LUT4x8_ha
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X1Y2_Emulate_Bitstream)
@@ -1298,7 +1298,7 @@ LUT4x8_ha
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-LUT4x8_ha
+(* keep *) LUT4x8_ha
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X2Y2_Emulate_Bitstream)
@@ -1343,7 +1343,7 @@ LUT4x8_ha
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-LUT4x8_ha
+(* keep *) LUT4x8_ha
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X3Y2_Emulate_Bitstream)
@@ -1388,7 +1388,7 @@ LUT4x8_ha
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-LUT4x8_ha
+(* keep *) LUT4x8_ha
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X4Y2_Emulate_Bitstream)
@@ -1433,7 +1433,7 @@ LUT4x8_ha
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-LUT4x8_ha
+(* keep *) LUT4x8_ha
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X5Y2_Emulate_Bitstream)
@@ -1478,7 +1478,7 @@ LUT4x8_ha
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-LUT4x8_ha
+(* keep *) LUT4x8_ha
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X6Y2_Emulate_Bitstream)
@@ -1523,7 +1523,7 @@ LUT4x8_ha
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-LUT4x8_ha
+(* keep *) LUT4x8_ha
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X7Y2_Emulate_Bitstream)
@@ -1568,7 +1568,7 @@ LUT4x8_ha
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-LUT4x8_ha
+(* keep *) LUT4x8_ha
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X8Y2_Emulate_Bitstream)
@@ -1613,7 +1613,7 @@ LUT4x8_ha
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-E_IO4
+(* keep *) E_IO4
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X9Y2_Emulate_Bitstream)
@@ -1650,7 +1650,7 @@ E_IO4
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-SW_term
+(* keep *) SW_term
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X0Y3_Emulate_Bitstream)
@@ -1672,7 +1672,7 @@ SW_term
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-S_IO2
+(* keep *) S_IO2
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X1Y3_Emulate_Bitstream)
@@ -1707,7 +1707,7 @@ S_IO2
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-S_IO4
+(* keep *) S_IO4
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X2Y3_Emulate_Bitstream)
@@ -1748,7 +1748,7 @@ S_IO4
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-S_IO4
+(* keep *) S_IO4
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X3Y3_Emulate_Bitstream)
@@ -1789,7 +1789,7 @@ S_IO4
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-S_term
+(* keep *) S_term
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X4Y3_Emulate_Bitstream)
@@ -1818,7 +1818,7 @@ S_term
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-S_term
+(* keep *) S_term
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X5Y3_Emulate_Bitstream)
@@ -1847,7 +1847,7 @@ S_term
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-S_term
+(* keep *) S_term
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X6Y3_Emulate_Bitstream)
@@ -1876,7 +1876,7 @@ S_term
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-S_term
+(* keep *) S_term
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X7Y3_Emulate_Bitstream)
@@ -1905,7 +1905,7 @@ S_term
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-S_term
+(* keep *) S_term
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X8Y3_Emulate_Bitstream)
@@ -1934,7 +1934,7 @@ S_term
 
  //tile IO port will get directly connected to top-level tile module
  (* keep *)
-SE_term
+(* keep *) SE_term
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(`Tile_X9Y3_Emulate_Bitstream)

@@ -1,10 +1,13 @@
 PDK ?= sky130A
 
+TOP ?= tt_um_fabulous_sky_26c
+
 # Get the fabric names
 FABRICS :=  $(patsubst fabrics/%,%,$(wildcard fabrics/*)) 
 
 FABRICS_OPENROAD := $(addsuffix -openroad,$(FABRICS))
 FABRICS_KLAYOUT := $(addsuffix -klayout,$(FABRICS))
+FABRICS_COPY := $(addsuffix -copy,$(FABRICS))
 
 all: $(FABRICS)
 .PHONY: all
@@ -21,12 +24,12 @@ $(FABRICS_KLAYOUT):
 	librelane --pdk ${PDK} fabrics/$(subst -klayout,,$@)/config.yaml --last-run --flow OpenInKLayout
 .PHONY: $(FABRICS_KLAYOUT)
 
-copy-fabric:
+$(FABRICS_COPY):
 	# Copy fabric database
-	mkdir -p user_designs/fabrics/tiny_fabric_10x4/macro/${PDK}/
-	cp -R fabrics/tiny_fabric_10x4/macro/${PDK}/fabulous/ user_designs/fabrics/tiny_fabric_10x4/macro/${PDK}/
-	cp fabrics/tiny_fabric_10x4/constraints.pcf user_designs/fabrics/tiny_fabric_10x4/constraints.pcf
-.PHONY: copy-fabric
+	mkdir -p user_designs/fabrics/$(subst -copy,,$@)/macro/${PDK}/
+	cp -R fabrics/$(subst -copy,,$@)/macro/${PDK}/fabulous/ user_designs/fabrics/$(subst -copy,,$@)/macro/${PDK}/
+	cp fabrics/$(subst -copy,,$@)/constraints.pcf user_designs/fabrics/$(subst -copy,,$@)/constraints.pcf
+.PHONY: $(FABRICS_COPY)
 
 tt-fabulous:
 	librelane config.yaml --pdk ${PDK} --save-views-to macro/
@@ -41,8 +44,24 @@ tt-fabulous-klayout:
 .PHONY: tt-fabulous
 
 # Copy the files for Tiny Tapeout
-copy-tt:
+tt-fabulous-copy:
 	# Copy GDS and LEF
-	cp macro/gds/tt_um_fabulous_sky_26b.gds gds/tt_um_fabulous_sky_26b.gds
-	cp macro/lef/tt_um_fabulous_sky_26b.lef lef/tt_um_fabulous_sky_26b.lef
-.PHONY: copy-tt
+	cp macro/gds/${TOP}.gds gds/${TOP}.gds
+	cp macro/lef/${TOP}.lef lef/${TOP}.lef
+.PHONY: tt-fabulous-copy
+
+sim-fabric:
+	cd tb; PDK=${PDK} SCL=${SCL} python3 fabric_tb.py
+.PHONY: sim-fabric
+
+sim-fabric-gl:
+	cd tb; GL=1 PDK=${PDK} SCL=${SCL} python3 fabric_tb.py
+.PHONY: sim-fabric-gl
+
+sim-top:
+	cd tb; PDK=${PDK} SCL=${SCL} python3 top_tb.py
+.PHONY: sim-top
+
+sim-top-gl:
+	cd tb; GL=1 PDK=${PDK} SCL=${SCL} python3 top_tb.py
+.PHONY: sim-top-gl

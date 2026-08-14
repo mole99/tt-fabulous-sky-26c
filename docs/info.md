@@ -9,7 +9,7 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Tiny FABulous FPGA for SKY26a.
+Tiny FABulous FPGA for SKY26c.
 
 This design implements a tiny FPGA with 128 LUT4+FF. The FPGA fabric is 10x4 tiles in size, of which 8x2 are LUT4x8_ha tiles.
 The logic cells include a vertical carry-chain in upwards direction, allowing for fast additions up to 15-bits.
