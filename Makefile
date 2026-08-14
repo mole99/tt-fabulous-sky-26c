@@ -1,4 +1,5 @@
 PDK ?= sky130A
+SCL ?= sky130_fd_sc_hd
 
 TOP ?= tt_um_fabulous_sky_26c
 
